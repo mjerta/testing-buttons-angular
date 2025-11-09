@@ -1,14 +1,13 @@
-import { Component, AfterViewInit } from '@angular/core';
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-test-button',
-  imports: [],
   templateUrl: './test-button.html',
-  styleUrl: './test-button.scss',
+  styleUrls: ['./test-button.scss'],
+  standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class TestButton implements AfterViewInit {
+export class TestButton {
 
   testResult: number = 0;
 
@@ -16,21 +15,5 @@ export class TestButton implements AfterViewInit {
     this.testResult++;
   }
 
-  ngAfterViewInit() {
-    const swiper = new Swiper('.swiper', {
-      direction: 'horizontal',
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-    });
-  }
-
 }
+

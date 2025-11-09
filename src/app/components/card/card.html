@@ -1,7 +1,20 @@
-<div class="swiper h-[15rem] w-[8rem]">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide bg-blue-500 rounded-md">Slide 1</div>
-    <div class="swiper-slide bg-red-500 rounded-md">Slide 2</div>
-    <div class="swiper-slide bg-yellow-500 rounded-md">Slide 3</div>
-  </div>
-</div>
+<swiper-container
+  class="aspect-[4/3] w-[60vw] h-[80vh]"
+  effect="cards"
+  grab-cursor="true"
+  initial-slide="0"
+  cards-effect-per-slide-offset="20"
+  cards-effect-per-slide-rotate="10"
+  cards-effect-rotate="true"
+  cards-effect-slide-shadows="true"
+>
+  <swiper-slide class="bg-blue-500 rounded-md flex justify-center items-center">
+    <p>test</p>
+  </swiper-slide>
+  <swiper-slide class="bg-red-500 rounded-md flex justify-center items-center">
+    <p>test</p>
+  </swiper-slide>
+  <swiper-slide class="bg-yellow-500 rounded-md flex justify-center items-center">
+    <p>test</p>
+  </swiper-slide>
+</swiper-container>
